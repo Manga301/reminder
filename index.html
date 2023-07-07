@@ -30,6 +30,7 @@
                     id="reminder-input" 
                     class="form-input" 
                     placeholder="Enter Reminder">
+                <div id="message" class="hidden">message</div>
             </div>
             <div class="form-control">
                 <button class="btn">
@@ -46,7 +47,11 @@
                 placeholder="Filter Reminders">
         </div>
         <!-- list of reminders -->
-        <ul class="reminder-list"></ul>
+        <ul id="reminder-list" class="reminders">
+            <li>sd<button class="btn-link red-text"><i class="fa-solid fa-xmark"></i></button></li>
+            <li>tester<button class="btn-link red-text"><i class="fa-solid fa-xmark"></i></button></li>
+            <li>moon<button class="btn-link red-text"><i class="fa-solid fa-xmark"></i></button></li>
+        </ul>
         <!-- remove all reminders -->
         <button id="clear" class="btn-clear">Clear All</button>
     </div>
