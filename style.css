@@ -22,24 +22,37 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-dark-color);
+    background-color: #0b0b0b;
 }
 
 header {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 25px;
+    justify-content: center;
+    margin: 15px 0;
+    border-radius: 8px;
+    padding: 2px;
+    color: #fff; 
 }
 
 header h1 {
     font-weight: 300;
-    margin-left: 10px;
+    color: #fff;
+}
+
+.dot-icon {
+    font-size: 1.2em;
+    color: #A13DF4;
 }
 
 .container {
     max-width: 500px;
     margin: 30px auto;
     padding: 20px;
+    background: rgb(53,53,230);
+background: linear-gradient(-90deg, rgba(53,53,230,1) 0%, rgba(102,45,252,1) 35%, rgba(156,44,242,1) 100%);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 /* reminder icon */
@@ -53,10 +66,14 @@ header .reminder-icon {
     font-size: 18px;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid var(--btn-white-color);
-    border-radius: 5px;
+    border: 1px solid #242424;
+    border-radius: 8px;
     background-color: transparent;
     outline: transparent;
+}
+
+::placeholder{
+    color: #242424;
 }
 
 div #message {
@@ -71,17 +88,17 @@ div #message {
     margin-bottom: 20px;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid var(--primary-dark-color);
+    border-bottom: 1px solid #242424;
     background-color: transparent;
     outline: transparent;
 }
 
 /* buttons */
 .btn {
-    background-color: var(--blue-color);
+    background-color: #3535E6;
     color: var(--primary-light-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -96,29 +113,27 @@ div #message {
   }
 
 .btn:hover {
-    background-color: var(--primary-dark-color);
+    background-color: #2C98F2;
 }
 
 .btn-clear {
     margin-top: 20px;
     width: 100%;
     font-size: 16px;
-    background-color: darkgray;
+    background-color: rgba(240, 46, 170, 0.4);
     color: var(--primary-light-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
 }
 
 .btn-clear:hover {
-    background-color: var(--btn-white-color);
-    color: var(--primary-dark-color);
-    border: 1px solid var(--primary-dark-color);
+    background-color: #A13DF4;
 }
 
 .red-text {
-    color: var(--accent-color);
+    color: #662DFC;
 }
 
 /* reminders */
@@ -132,8 +147,9 @@ div #message {
     display: flex;
     justify-content: space-between;
     width: 45%;
-    border: 1px solid;
-    border-radius: 5px;
+    border: none;
+    background-color: #151515;
+    border-radius: 8px;
     padding: 10px 15px;
     margin: 0 5px 20px;
     font-weight: 700;

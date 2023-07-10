@@ -9,7 +9,7 @@ const clearBtn = document.getElementById("clear");
 function onAddSubmit(e){
     e.preventDefault();
 
-    let newReminder = reminderInput.value
+    let newReminder = reminderInput.value;
 
     // check if there's anything in the input
     if(newReminder === ""){
@@ -56,6 +56,24 @@ function createIcon(classes){
     return icon;
 }
 
+// remove single reminder onClick
+function onReminderClick(e){
+    if(e.target.parentElement.classList.contains("btn-link")){
+        removeReminder(e.target.parentElement.parentElement);
+    }
+}
+
+// remove single reminder function
+function removeReminder(reminder){
+    
+    if(confirm("Are you sure?")){
+        reminder.remove();
+
+        checkUI();
+    }
+
+}
+
 // check UI status
 function checkUI(){
     const reminders = reminderList.querySelectorAll("li");
@@ -75,6 +93,7 @@ checkUI();
 // initialize app
 function init(){
     reminderForm.addEventListener("submit", onAddSubmit);
+    reminderList.addEventListener("click", onReminderClick);
 }
 
 init();
