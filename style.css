@@ -66,8 +66,8 @@ header .reminder-icon {
     font-size: 18px;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #242424;
-    border-radius: 8px;
+    border: none;
+    border-bottom: 1px solid #242424;
     background-color: transparent;
     outline: transparent;
 }
@@ -152,7 +152,7 @@ div #message {
     border-radius: 8px;
     padding: 10px 15px;
     margin: 0 5px 20px;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 /* media queries */
