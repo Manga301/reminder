@@ -97,6 +97,7 @@ div #message {
 .btn {
     background-color: #3535E6;
     color: var(--primary-light-color);
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
@@ -113,13 +114,14 @@ div #message {
   }
 
 .btn:hover {
-    background-color: #2C98F2;
+    background-color: #4747DF;
 }
 
 .btn-clear {
     margin-top: 20px;
     width: 100%;
     font-size: 16px;
+    font-weight: 700;
     background-color: rgba(240, 46, 170, 0.4);
     color: var(--primary-light-color);
     border: none;
@@ -129,7 +131,7 @@ div #message {
 }
 
 .btn-clear:hover {
-    background-color: #A13DF4;
+    background-color: rgba(225, 96, 178, 0.4);
 }
 
 .red-text {

@@ -88,12 +88,22 @@ function checkUI(){
 
 }
 
+// remove all the reminders
+function clearAllReminders(){
+
+    const reminders = reminderList.querySelectorAll("li");
+    reminders.forEach(reminder => reminder.remove());
+
+    checkUI();
+}
+
 checkUI();
 
 // initialize app
 function init(){
     reminderForm.addEventListener("submit", onAddSubmit);
     reminderList.addEventListener("click", onReminderClick);
+    clearBtn.addEventListener("click", clearAllReminders)
 }
 
 init();
