@@ -78,7 +78,7 @@ header .reminder-icon {
 
 div #message {
     margin-bottom: 20px;
-    color: var(--accent-color);
+    color: #fff;
 }
 
 .input-filter {
@@ -134,8 +134,8 @@ div #message {
     background-color: rgba(225, 96, 178, 0.4);
 }
 
-.red-text {
-    color: #662DFC;
+.message-text {
+    color: #fff;
 }
 
 /* reminders */

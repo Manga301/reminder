@@ -15,6 +15,12 @@ function onAddSubmit(e){
     if(newReminder === ""){
         inputMessage.classList.remove("hidden");
         inputMessage.textContent = "Please add a reminder";
+
+        // remove message after 3 seconds
+        setTimeout(() => {
+            inputMessage.textContent = "";
+        }, 3000);
+
         return;
     }
 
@@ -32,7 +38,7 @@ function addReminder(item){
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(item));
 
-    const button = createButton("btn-link red-text");
+    const button = createButton("btn-link message-text");
     li.appendChild(button);
 
     reminderList.appendChild(li);
@@ -91,8 +97,9 @@ function checkUI(){
 // remove all the reminders
 function clearAllReminders(){
 
-    const reminders = reminderList.querySelectorAll("li");
-    reminders.forEach(reminder => reminder.remove());
+    while(reminderList.firstChild){
+        reminderList.removeChild(reminderList.firstChild);
+    }
 
     checkUI();
 }
